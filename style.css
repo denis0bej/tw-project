@@ -1,0 +1,262 @@
+* {
+    font-family: 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main {
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: #ffffff;
+    background-color: #0D1A22;
+    margin: 0;
+    padding: 0;
+}
+.bgContainer {
+    height: 88vh;
+    width: 100vw;
+}
+.background {
+    width:100%;
+    height: 100%;
+    background:url("images/Background.jpg") repeat-x center;
+    overflow: auto;
+    position: fixed;
+    z-index: -100;
+    resize:both;
+}
+
+.navbar {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    grid-template-rows:max-content;
+    background-color: #031016;
+    padding: 25px 20px;
+    text-align: left;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    margin: 0;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+nav ul{
+    block-size: auto;
+    display:inline-flex;
+    flex-direction: row;
+    justify-content:start;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display:flex;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #0D1A22;
+    margin-left: 20px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.dropdown .dropbtn {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffd1dc;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.sectiune {
+    margin-left: 80px;
+    margin-right: 80px;
+    padding: 30px;
+    padding-bottom: 40px;
+    text-align: left;
+    font-size: x-large;
+    background-color: #0D1A22;
+}
+.sectiune p {
+    padding-top: 20px;
+}
+.sectiune ol {
+    padding-left: 30px;
+}
+.sectiune ol li{
+    padding-top: 10px;
+}
+.elem-fauna {
+    display:flex;
+    justify-content: space-between;
+}
+.img-fauna {
+    display: inline-flex;
+    justify-content: center;
+}
+.img-fauna img {
+    flex:1;
+    width: 200px;
+    height: 200px;
+}
+footer {
+    background-color: #031016;
+    text-align: center;
+    padding: 10px 20px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted #fff;
+}
+  
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #031016;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position:absolute;
+    transform: translate(-60%, -80%);
+    z-index: 10;
+}
+  
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+} 
+.img-fauna img:hover {
+    transform: scale(1.7);
+    filter: brightness(1.2);
+}
+.box{
+    display: none;
+}
+@media (max-width: 1100px) {
+    .bgContainer{
+        height: 76vh;
+    }
+    nav ul li {
+        display:flex;
+        position: relative;
+    }
+    .navbar {
+        display:grid;
+        justify-content: center;
+        text-align: center;
+    }
+    .navbar h1 {
+        padding-bottom: 10px;
+    }
+    .elem-fauna {
+        display: inline-flex;
+        flex-direction: column;
+    }
+    .sectiune {
+        text-align: left;
+        font-size: large;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .img-fauna img:hover {
+        transform: scale(1.5);
+        filter: brightness(1.2);
+    }
+    .box{
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        display: inline-flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .navbar {
+        display:flex;
+        text-align: left;
+    }
+    .box { 
+        display: flex;
+        justify-content: center;
+        width: 60px; 
+        height: 60px; 
+        margin: 20px; 
+        transition: transform 0.5s;}
+    .navbar h1 {
+        font-size:x-large;
+    }
+    nav ul li{
+        transition: transform 1s;
+    }
+    li.dropdown{
+        display: inline-flex;
+    }
+    .sectiune {
+        text-align: left;
+        font-size: medium;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .elem-fauna {
+        display: inline-flex;
+        flex-direction: column;
+    }
+    div.img-fauna {
+        display: inline-flex;
+        flex-direction: column;
+    }
+    .img-fauna img:hover {
+        transform: scale(1.25);
+        filter: brightness(1.2);
+    }
+}
+nav ul li:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+nav ul li{
+    transition: transform 0.5s, filter 0.5s;
+}
+
+.img-fauna img {
+    transition: transform 0.5s, filter 0.5s;
+}
+.animate { 
+    transform: scale(1.2) rotate(180deg); 
+}
+.animate_menu {
+    transform: translateX(-100px)
+}
