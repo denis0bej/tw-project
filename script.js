@@ -1,19 +1,19 @@
 function animateBox() {
     const box = document.querySelector('.box');
+    const buttoncontainer = document.querySelector('.navbar-list');
+    const headerh = document.querySelector('.navbar').children[0];
+    console.log(headerh)
     box.classList.toggle('animate');
     
-    
-    for(let i=0;i<3;i++)
-        if (box.parentNode.children[0].style.display=="flex") {
-        box.parentNode.children[i].style.display="none";
-        box.parentNode.parentNode.parentNode.children[0].style.display="flex";
-        document.getElementById("nav-el").classList.toggle("animate_menu");
+    for(let i=0;i<3;i++){
+        if(buttoncontainer.children[i].className ===""){
+            buttoncontainer.children[i].className+="responsive";
+            //headerh.style.display = "none";
+            buttoncontainer.style.width = "100%";
+        } else {
+            buttoncontainer.children[i].className ="";
+            //headerh.style.display = "inline-flex";
+            buttoncontainer.style.width = "60px";
         }
-        else {
-            box.parentNode.children[i].style.display="flex";
-            box.parentNode.parentNode.parentNode.children[0].style.display="none";
-            document.getElementById("nav-el").classList.toggle("animate_menu");
-        }
-
-        
+    }     
 }
