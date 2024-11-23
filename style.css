@@ -38,7 +38,7 @@ body {
     text-align: left;
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 500;
     margin: 0;
 }
 
@@ -162,6 +162,34 @@ footer {
     display: none;
 }
 
+img.leafman{
+    max-width: 50px;
+    display:flex;
+    position: relative;
+    top: calc(88vh - 70px);
+    transform: scaleX(1);
+    animation: walk 6s ease-in 0s infinite;
+}
+@keyframes walk{
+    0%  {left: 0px; top: calc(88vh - 70px);}
+    6.25%{top: calc(88vh - 140px);}
+    12.5% {top: calc(88vh - 70px);}
+    18.75%{top: calc(88vh - 140px);}
+    25% {top: calc(88vh - 70px);}
+    31.25%{top: calc(88vh - 140px);}
+    37.5% {top: calc(88vh - 70px);}
+    43.75%{top: calc(88vh - 140px);transform: scaleX(1);}
+    50%{left: calc(100vw - 50px); top: calc(88vh - 70px);transform: scaleX(-1);}
+    56.25%{top: calc(88vh - 140px);}
+    62.5%{top: calc(88vh - 70px);}
+    68.75% {top: calc(88vh - 140px);}
+    75%{top: calc(88vh - 70px);}
+    81.25% {top: calc(88vh - 140px);}
+    87.5%{top: calc(88vh - 70px);}
+    93.75% {top: calc(88vh - 140px);transform: scaleX(-1);}
+    100%{left: 0px; top: calc(88vh - 70px);transform: scaleX(1);}
+}
+
 @media (max-width: 940px) {
     .bgContainer{
         height: 76vh;
@@ -200,6 +228,25 @@ footer {
     .navbar h1{
         width:100%;
         text-align: center;
+    }
+    img.leafman{
+        max-width: 50px;
+        display:flex;
+        position: relative;
+        top: calc(76vh - 70px);
+        transform: scaleX(1);
+        animation: walk 5s ease-in 0s infinite;
+    }
+    @keyframes walk{
+        0%  {left: 0px; top: calc(76vh - 70px);}
+        12.5%{top: calc(76vh - 140px);}
+        25% {top: calc(76vh - 70px);}
+        37.5%{top: calc(76vh - 140px);transform: scaleX(1);}
+        50% {left: calc(100vw - 50px);top: calc(76vh - 70px);transform: scaleX(-1);}
+        62.5%{top: calc(76vh - 140px);}
+        75% {top: calc(76vh - 70px);}
+        87.5%{top: calc(76vh - 140px);transform: scaleX(-1);}
+        100%{left: 0px; top: calc(76vh - 70px);}
     }
 }
 
@@ -281,6 +328,25 @@ footer {
         color:#0D1A22;
         background-color: #031016;
     }
+    img.leafman{
+        max-width: 50px;
+        display:flex;
+        position: relative;
+        top: calc(76vh - 70px);
+        transform: scaleX(1);
+        animation: walk 3s ease-in 0s infinite;
+    }
+    @keyframes walk{
+        0%  {left: 0px; top: calc(76vh - 70px);}
+        12.5%{top: calc(76vh - 110px);}
+        25% {top: calc(76vh - 70px);}
+        37.5%{top: calc(76vh - 110px);transform: scaleX(1);}
+        50% {left: calc(100vw - 50px);top: calc(76vh - 70px);transform: scaleX(-1);}
+        62.5%{top: calc(76vh - 110px);}
+        75% {top: calc(76vh - 70px);}
+        87.5%{top: calc(76vh - 110px);transform: scaleX(-1);}
+        100%{left: 0px; top: calc(76vh - 70px);}
+    }
 }
 
 nav ul li:hover {
@@ -298,3 +364,4 @@ nav ul li{
 .animate { 
     transform: rotate(180deg); 
 }
+
