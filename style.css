@@ -259,7 +259,7 @@ img.leafman{
     }
     .navbar {
         display:inline-flex;
-        flex-wrap: none;
+        flex-wrap:nowrap;
         justify-content: flex-end;
         text-align: left;
         padding: 20px 20px;
