@@ -10,7 +10,7 @@ function animateBox() {
             //headerh.style.display = "none";
             buttoncontainer.style.width = "100%";
             buttoncontainer.children[i].classList.toggle('animate_list');
-            setTimeout(() => { buttoncontainer.children[i].classList.toggle('animate_list')}, 0.1);
+            setTimeout(() => { buttoncontainer.children[i].classList.toggle('animate_list')}, 0.2);
         } else {
             buttoncontainer.children[i].className ="1";
             //headerh.style.display = "inline-flex";
