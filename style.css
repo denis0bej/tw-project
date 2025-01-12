@@ -439,9 +439,6 @@ img.leafman {
     text-align: left;
     padding: 20px 20px;
   }
-  .navbar-list :not(:last-child) {
-    /* transition-duration: 1s; */
-  }
   .box {
     display: flex;
     justify-content: center;
